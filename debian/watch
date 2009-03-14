@@ -1,0 +1,8 @@
+# Watch control file for uscan
+# See uscan(1) for format
+
+# Compulsory line, this is a version 3 file
+version=3
+
+# Find new files on sourceforge, for debscripts >= 2.9
+http://sf.net/chocolate-doom/chocolate-doom-(.+)\.tar\.gz

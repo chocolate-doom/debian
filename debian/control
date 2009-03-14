@@ -1,0 +1,26 @@
+Source: chocolate-doom
+Section: contrib/games
+Priority: optional
+Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Uploaders: Jon Dowland <jon@alcopop.org>
+Build-Depends: debhelper (>= 4.0.0), autotools-dev, libsdl1.2-dev (>= 1.2.2-3.1), libsdl-mixer1.2-dev (>= 1.2.0-1.1), libsdl-net1.2-dev (>= 1.2.0-5.1), m4
+Standards-Version: 3.7.2
+XS-Vcs-Svn: svn://svn.debian.org/svn/pkg-games/packages/trunk/chocolate-doom/
+XS-Vcs-Browser: http://svn.debian.org/wsvn/pkg-games/packages/trunk/chocolate-doom/?op=log
+Homepage: http://chocolate-doom.org/
+XS-DM-Upload-Allowed: yes
+
+Package: chocolate-doom
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: Doom engine closely-compatible with vanilla doom
+ Chocolate doom is a modern, cross-platform doom engine with
+ the major design goal of emulating the behaviour of vanilla
+ Doom as close as is possible. For example, chocolate doom
+ can read and write vanilla doom save games.
+ .
+ Unlike most modern doom engines, chocolate doom is not
+ derived from the Boom source-port and does not inherit it's
+ features (or bugs).
+ .
+ Chocolate doom requires a doom-wad to play.

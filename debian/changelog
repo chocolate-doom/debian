@@ -1,0 +1,36 @@
+chocolate-doom (1.2.1-0) UNRELEASED; urgency=low
+
+  * Build for the Chocolate Doom website.
+  * Remove dependency on doom-wad.
+
+ -- Simon Howard <fraggle@gmail.com>  Sat, 14 Mar 2009 14:06:00 +0000
+
+chocolate-doom (1.0.0-1) UNRELEASED; urgency=low
+
+  * (NOT RELEASED YET) New upstream release
+  * Add DM-Upload-Allowed: control field
+
+ -- Jon Dowland <jon@alcopop.org>  Tue, 11 Dec 2007 10:16:03 +0000
+
+chocolate-doom (0.1.4-1) UNRELEASED; urgency=low
+
+  [ Jon Dowland ]
+  * Initial Release. Closes: #351594
+  * src/Automake.am adjusted to install into /usr/games
+  * quote a backslash in the manpage
+  * update menu section to "Games/Action" for menu transition
+    (thanks Linas Žvirblis)
+
+  [ Cyril Brulebois ]
+  * Added XS-Vcs-Svn and XS-Vcs-Browser fields in the control file.
+
+  [ Jon Dowland ]
+  * use autotools-dev config.guess/sub to keep the diff.gz clean
+  * use quilt for patch management
+
+  [ Barry deFreese ]
+  * Fix make distclean warning
+  * Add watch file
+  * Add Homepage field in debian/control
+
+ -- Jon Dowland <jon@alcopop.org>  Thu, 23 Aug 2007 18:40:52 +0100

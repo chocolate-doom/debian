@@ -1,0 +1,6 @@
+?package(chocolate-doom):\
+  needs="X11"\
+  section="Games/Action"\
+  hints="Doom,First person"\
+  title="Chocolate Doom"\
+  command="/usr/games/chocolate-doom"
