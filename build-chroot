@@ -50,5 +50,5 @@ add_pkg cdbs
 add_pkg vim-full
 add_pkg less
 
-echo debootstrap "--include=$pkgs" "$RELEASE" "$dest_dir" "$MIRROR"
+debootstrap "--include=$pkgs" "$RELEASE" "$dest_dir" "$MIRROR"
 
