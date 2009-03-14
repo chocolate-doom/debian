@@ -1,0 +1,29 @@
+Index: src/i_main.c
+===================================================================
+--- src/i_main.c	(revision 1472)
++++ src/i_main.c	(working copy)
+@@ -76,6 +76,7 @@
+ 
+     // Linux version:
+ 
++#ifdef CPU_SET
+     {
+         cpu_set_t set;
+ 
+@@ -84,9 +85,16 @@
+ 
+         sched_setaffinity(getpid(), sizeof(set), &set);
+     }
++#else
++    {
++        unsigned long mask = 1;
+ 
++        sched_setaffinity(getpid(), 1, &mask);
++    }
+ #endif
+ 
++#endif
++
+     // start doom
+ 
+     D_DoomMain ();

@@ -2,6 +2,9 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/rules/simple-patchsys.mk
+
 # These are used for cross-compiling and for saving the configure script
 # from having to guess our platform (since we know it already)
 DEB_HOST_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
@@ -31,21 +34,6 @@ build-stamp:  config.status
 	$(MAKE)
 	touch build-stamp
 	cd man && $(MAKE)
-
-clean:
-	dh_testdir
-	dh_testroot
-	rm -f build-stamp 
-	
-	[ ! -f Makefile ] || $(MAKE) distclean
-	
-	# stuff we don't want in diff.gz
-	find -name config.sub   -print0 | xargs -0 -r rm -f \;
-	find -name config.guess -print0 | xargs -0 -r rm -f \;
-	
-	-cd man && $(MAKE) clean
-
-	dh_clean
 
 install: build
 	dh_testdir

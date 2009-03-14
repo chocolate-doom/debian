@@ -34,6 +34,8 @@ add_pkg libsdl-mixer1.2-dev
 add_pkg libsdl-net1.2-dev
 add_pkg python-imaging
 add_pkg subversion
+add_pkg dpkg-dev
+add_pkg cdbs
 
 debootstrap "--include=$pkgs" "$RELEASE" "$dest_dir" "$MIRROR"
 
