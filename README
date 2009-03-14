@@ -1,0 +1,5 @@
+For the Debian packages released on the website, a chroot environment is
+built using an old version of Debian (Sarge).  As all the packages used are
+backwards-compatible, the package will work on any recent versions
+of Debian or distributions derived from it (Ubuntu, etc).
+
