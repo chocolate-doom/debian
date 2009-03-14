@@ -16,7 +16,7 @@ fi
 dest_dir="$1"
 
 add_pkg() {
-	if [ ".$pkgs" = "" ]; then
+	if [ ".$pkgs" = "." ]; then
 		pkgs="$1"
 	else
 		pkgs="$pkgs,$1"
@@ -25,18 +25,30 @@ add_pkg() {
 
 pkgs=""
 
+# Basic packages for C build:
 add_pkg gcc
 add_pkg make
+
+# Chocolate Doom dependencies:
 add_pkg automake1.8
 add_pkg autoconf
+add_pkg libtool
 add_pkg libsdl1.2-dev
 add_pkg libsdl-mixer1.2-dev
 add_pkg libsdl-net1.2-dev
 add_pkg python-imaging
+
+# Needed for svn checkout
 add_pkg subversion
+
+# Packages for debian package build:
 add_pkg debhelper
 add_pkg dpkg-dev
 add_pkg cdbs
 
-debootstrap "--include=$pkgs" "$RELEASE" "$dest_dir" "$MIRROR"
+# Basic convenience packages:
+add_pkg vim-full
+add_pkg less
+
+echo debootstrap "--include=$pkgs" "$RELEASE" "$dest_dir" "$MIRROR"
 
